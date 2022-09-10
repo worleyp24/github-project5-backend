@@ -1,0 +1,117 @@
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-around;
+    align-content:space-between;
+    background: whitesmoke;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    /* cursor: pointer; */
+}
+
+.container:hover {
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+    transition: .2s ease-in;
+}
+
+.details {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+}
+
+.button {
+display: flex;
+}
+
+.discount {
+    position: absolute;
+    padding: 0.1rem 0.3rem;
+    margin: 0.2rem 0 0 0;
+    background:rgba(0, 0, 0, 0.7);
+    color: white;
+    z-index: 1;
+}
+
+.image {
+    display: flex;
+}
+
+.image img {
+    object-fit: cover;
+}
+
+.bestseller {
+    font-size: 0.8rem;
+    position: absolute;
+    padding: 0.1rem 0.3rem;
+    margin: 0.3rem 0 0 0;
+    background:rgba(248, 1, 1, 0.7);
+    color: white;
+    z-index: 1;
+}
+
+.fresh {
+    font-size: 0.8rem;
+    position: absolute;
+    padding: 0.1rem 0.3rem;
+    margin: 0.3rem 0 0 163px;
+    background:rgba(248, 1, 1, 0.7);
+    color: white;
+    z-index: 1;
+}
+
+.name {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 0.1rem;
+    height: 4rem;
+    font-size: 1.5rem;
+}
+
+.container .buttonContainer {
+    width: 180px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.button {
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+}
+
+.icon {
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+.price {
+    font-weight: 700;
+    margin: 0.4rem;
+}
+
+.description {
+    height: 60px;
+    margin: 0.4rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+.category {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 0.8rem;
+}

@@ -1,0 +1,29 @@
+.container {
+    z-index: 0;
+    height: 97vh;
+    background-image: linear-gradient(rgba(0, 0, 10,0.4),rgba(4,9,30,0.4)), url("../../public/images/featured1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container h1 {
+    font-size: 3rem;
+    position: absolute;
+    top: 40vh;
+    color: white;
+    padding: 50px;
+}
+
+@media (max-width: 426px) {
+    .container h1 {
+        top: 10vh;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container h1 {
+        top: 40vh;
+        font-size: 1.5rem;
+    }
+}
