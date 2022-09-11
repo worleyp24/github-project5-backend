@@ -107,7 +107,7 @@
     .left {
         display: flex;
         flex-flow: column wrap;
-        align-items: start;
+        align-items: flex-start;
     }
     .leftDetails small {
         display: none;

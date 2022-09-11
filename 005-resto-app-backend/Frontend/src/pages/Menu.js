@@ -35,16 +35,6 @@ const Menu = ({
       ))
     );
 
-  // Extract categories from list of products
-  // const allCategories = products
-  //   .flatMap((item) => item.category)
-  //   .reduce((categories, item) => {
-  //     if (!categories.includes(item)) {
-  //       categories.push(item);
-  //     }
-  //     return categories;
-  //   }, []);
-
   const categories = allCategories
     .filter((category) => category !== "New")
     .filter((category) => category !== "Best Seller");
