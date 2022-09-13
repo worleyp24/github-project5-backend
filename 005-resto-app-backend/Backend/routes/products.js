@@ -31,7 +31,7 @@ router.post("/*", (request, response) => {
     };
 
     productList.push(newItem);
-    fs.writeFileSync(productFilePath, JSON.stringify(productList));
+    fs.writeFileSync(productFilePath, JSON.stringify(productList, null, 2));
     response.status(201).send();
   } catch (err) {
     response.send(err.message);
@@ -45,7 +45,10 @@ router.delete("/:id", (request, response) => {
     const updatedProductList = productList.filter(
       (item) => item.id != request.params.id
     );
-    fs.writeFileSync(productFilePath, JSON.stringify(updatedProductList));
+    fs.writeFileSync(
+      productFilePath,
+      JSON.stringify(updatedProductList, null, 2)
+    );
     response.status(200).send();
   } catch (err) {
     response.send(err.message);
@@ -73,7 +76,7 @@ router.put("/:id", (request, response) => {
 
     productList.splice(indexOfItem, 1, editItem);
 
-    fs.writeFileSync(productFilePath, JSON.stringify(productList));
+    fs.writeFileSync(productFilePath, JSON.stringify(productList, null, 2));
     response.status(200).send();
   } catch (err) {
     response.send(err.message);

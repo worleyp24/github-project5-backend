@@ -22,7 +22,10 @@ router.post("/*", (request, response) => {
 
     const updatedCartItemList = [...request.body];
 
-    fs.writeFileSync(cartItemFilePath, JSON.stringify(updatedCartItemList));
+    fs.writeFileSync(
+      cartItemFilePath,
+      JSON.stringify(updatedCartItemList, null, 2)
+    );
     response.status(201).send();
   } catch (err) {
     response.send(err.message);
@@ -37,7 +40,10 @@ router.delete("/:id", (request, response) => {
     const updatedCartItemList = cartItemList.filter(
       (item) => item.id != request.params.id
     );
-    fs.writeFileSync(cartItemFilePath, JSON.stringify(updatedCartItemList));
+    fs.writeFileSync(
+      cartItemFilePath,
+      JSON.stringify(updatedCartItemList, null, 2)
+    );
     response.status(200).send();
   } catch (err) {
     response.send(err.message);
@@ -66,7 +72,7 @@ router.put("/:id", (request, response) => {
 
     cartItemList.splice(indexOfItem, 1, editItem);
 
-    fs.writeFileSync(cartItemFilePath, JSON.stringify(cartItemList));
+    fs.writeFileSync(cartItemFilePath, JSON.stringify(cartItemList, null, 2));
     response.status(200).send();
   } catch (err) {
     response.send(err.message);
