@@ -15,6 +15,8 @@ app.use(
 
 app.use(bodyParser.json());
 
+app.get("/");
+
 app.use("/Menu", productsRouter);
 app.use("/Cart", cartItemsRouter);
 
